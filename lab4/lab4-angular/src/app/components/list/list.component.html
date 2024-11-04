@@ -1,0 +1,13 @@
+<label for="itemadd">AddItem</label>
+<input type="text" #itemadd />
+<button (click)="addItem(itemadd.value)">Add</button>
+<ul>
+    @for(item of items; track item){
+    <li>
+        {{item}}
+        <button (click)="removeItem(item)">Remove</button>
+    </li>
+    }
+</ul>
+
+

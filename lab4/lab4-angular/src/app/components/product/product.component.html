@@ -1,0 +1,13 @@
+<label for="prodadd">AddItem</label>
+<input type="text" #prodadd />
+<button (click)="addProduct(prodadd.value)">Add</button>
+<ul>
+    @if(alert == true){
+        <app-alert></app-alert>
+    }
+    @for(prod of products; track prod){
+    <li>
+        {{prod}}
+    </li>
+    }
+</ul>

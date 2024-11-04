@@ -1,0 +1,24 @@
+<div class="top">
+<label for="prodadd">AddItem</label>
+<input type="text" #prodadd />
+<button (click)="addProduct({name: prodadd.value, bought: false})">Add</button>
+</div>
+@if(alert == true){
+    <app-alert></app-alert>
+}
+@for (product of products; track product){
+    @if (product.bought === true){
+        <li>
+            <span style="text-decoration: line-through">{{product.name}}</span>
+            <input type="checkbox" checked="checked" (change)="changeBought(product)">
+        </li>
+    }@else{
+        <li>
+            {{product.name}}
+            <input type="checkbox" (change)="changeBought(product)">
+        </li>
+    }
+}
+<button (click)="removeAllBought()">Remove all bought</button>
+
+

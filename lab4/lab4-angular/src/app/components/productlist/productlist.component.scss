@@ -1,0 +1,64 @@
+.top{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label{
+        font-size: 20px;
+        margin: 10px;
+        height: 50px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightseagreen;
+        border: none;
+        color: white;
+        border-radius: 5px;
+    }
+    input{
+        width: 200px;
+        height: 48px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 10px;
+    }
+    button{
+        background-color: lightseagreen;
+        font-size: 20px;
+        color: white;
+        height: 50px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    background-color: lightcoral;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
