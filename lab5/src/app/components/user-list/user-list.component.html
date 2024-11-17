@@ -1,0 +1,12 @@
+
+@for(user of users; track user){
+    <div class="userbox">
+        <p>ID: {{user.id}}</p>
+        <p>{{user.name}}</p>
+        <p>{{user.lastname}}</p>
+        <p>{{user.phone}}</p>
+        <button (click)="delUser(user)">Remove</button>
+        <button (click)="changeEdit(user)">Edit</button>
+    </div>
+  }
+<app-user-form (userAdded)="addUser($event)" [isEdited] = "isEdited" [editedID] = "editedID" (editUser)="editUser($event)"></app-user-form>

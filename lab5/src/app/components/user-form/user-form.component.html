@@ -1,0 +1,29 @@
+@if (isEdited) {
+    <form (ngSubmit)="edit()">
+        <p>Editing user {{editedID}}</p>
+        <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="user.name">
+        <input type="text" class="form-control" placeholder="Lastname" name="lastname" [(ngModel)]="user.lastname">
+        <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="user.phone">
+        <input type="text" class="form-control" placeholder="Date of Birth" name="date" [(ngModel)]="user.date">
+        <input type="text" class="form-control" placeholder="Street" name="street" [(ngModel)]="user.address.street">
+        <input type="text" class="form-control" placeholder="House/Flat number" name="house" [(ngModel)]="user.address.number">
+        <input type="text" class="form-control" placeholder="Postal code" name="postal" [(ngModel)]="user.address.postalCode">
+        <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="user.address.city">
+        <input type="text" class="form-control" placeholder="Flat number" name="flat" [(ngModel)]="user.address.flatNumber">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+}@else {
+    <form (ngSubmit)="addNew()">
+        <p>Adding new user</p>
+        <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="user.name">
+        <input type="text" class="form-control" placeholder="Lastname" name="lastname" [(ngModel)]="user.lastname">
+        <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="user.phone">
+        <input type="text" class="form-control" placeholder="Date of Birth" name="date" [(ngModel)]="user.date">
+        <input type="text" class="form-control" placeholder="Street" name="street" [(ngModel)]="user.address.street">
+        <input type="text" class="form-control" placeholder="House/Flat number" name="house" [(ngModel)]="user.address.number">
+        <input type="text" class="form-control" placeholder="Postal code" name="postal" [(ngModel)]="user.address.postalCode">
+        <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="user.address.city">
+        <input type="text" class="form-control" placeholder="Flat number" name="flat" [(ngModel)]="user.address.flatNumber">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+}
