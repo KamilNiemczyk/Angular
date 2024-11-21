@@ -1,10 +1,17 @@
 <app-post-form (refreshPosts)="refreshPosts()"></app-post-form>
 <button (click)="removePosts()">Remove posts</button>
 @for(post of posts; track post){
-    <div class="post">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.content }}</p>
-        <p>{{ post.createDate }}</p>
-        <p>{{post.dateOfLastEdit}}</p>
-    </div>
-}
+        <div class="post">
+            <h2>{{ post.title | uppercase}}</h2>
+            <p>{{ post.content }}</p>
+            <p>{{ post.createDate }}</p>
+            <p>{{post.dateOfLastEdit}}</p>
+            <p>ID: {{post.id}}</p>
+            <button (click)="removePost(post.id)">Remove post</button>
+            <button (click)="editPost(post.id)">Edit post</button>
+        </div>
+    }
+<div class="pagination">
+    <button (click)="prevPage()">Previous</button>
+    <button (click)="nextPage()">Next</button>
+</div>

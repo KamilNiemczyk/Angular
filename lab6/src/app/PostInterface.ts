@@ -3,4 +3,5 @@ export interface IPost{
     content : string;
     createDate : string;
     dateOfLastEdit : string;
+    id : number;
 }

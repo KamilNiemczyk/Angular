@@ -34,4 +34,23 @@ export class PostService {
   public removePosts(){
     localStorage.removeItem('posts');
   }
+  public removePost(id: number) {
+    let posts = this.getPosts();
+    posts = posts.filter(post => post.id !== id);
+    localStorage.setItem('posts', JSON.stringify(posts));
+  }
+  public editPost(id: number) {
+    let posts = this.getPosts();
+    let post = posts.filter(post => post.id === id);
+    if (post.length > 0) {
+      post[0].dateOfLastEdit = new Date().toLocaleString();
+      localStorage.setItem('posts', JSON.stringify(posts));
+    }
+  }
+  public getPostsByPage(page: number, postsPerPage: number): IPost[] {
+    const posts = this.getPosts();
+    const startPost = (page - 1) * postsPerPage;
+    const endPost = startPost + postsPerPage;
+    return posts.slice(startPost, endPost);
+  }    
 }
