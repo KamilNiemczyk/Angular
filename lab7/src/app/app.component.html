@@ -1,0 +1,13 @@
+<div class="buttons">
+  <button (click)="createClock()">Create Clock</button>
+  <button (click)="destroyClock()">Destroy Clock</button>
+</div>
+<p>Aktualny format godzinny to: {{this.format}}-godzinny</p>
+<button (click)="changeFormat()">Change Format</button>
+@if(this.showClock) {
+  <app-clock [format]="format"></app-clock>
+}@else{
+  @if(this.lastTime !== '') {
+    <p>Ostatnio wyświetlana godzina : {{ lastTime }}</p>
+  }
+}
