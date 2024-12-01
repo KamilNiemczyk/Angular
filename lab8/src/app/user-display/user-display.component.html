@@ -1,0 +1,20 @@
+<app-user-form></app-user-form>
+<div class="users">
+@for(user of users; track user){
+    <div class="user">
+        <p>{{user.name}}</p>
+        <p>{{user.lastName}}</p>
+        <p>{{user.email}}</p>
+        @for(address of user.addresses; track address){
+            <div class="address">
+                <p>{{address.street}}</p>
+                <p>{{address.city}}</p>
+                <p>{{address.postalCode}}</p>
+            </div>
+        }
+        <button (click)="deteleUser(user.id)">Usuń</button>
+    </div>
+}
+</div>
+<button (click)="refreshUsers()">Refresh</button>
+<button (click)="clearUsers()">Wyczyść użytkowników</button>

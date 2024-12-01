@@ -1,0 +1,22 @@
+<p>Tutaj form<p>
+
+<div [formGroup]="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+    <label for="lastName">Lastname:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email">
+    @for(addressForm of addresses.controls; track $index){
+        <div [formGroup]="addressForm">
+            <label for="street">Street:</label>
+            <input type="text" id="street" formControlName="street">
+            <label for="city">City:</label>
+            <input type="text" id="city" formControlName="city">
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" formControlName="postalCode">
+        </div>
+    }
+    <button (click)="addAddress()">Add Address</button>
+    <button (click)="saveForm()">Save</button>
+</div>
