@@ -1,0 +1,12 @@
+<div class="books">
+    @for(book of books; track book){
+        <div class="book">
+            <p>ID : {{book.id}}</p>
+            <p>Title : {{book.title}}</p>
+            <p>Author : {{book.author}}</p>
+            <button (click)="deleteBook(book.id)">Delete</button>
+            <button routerLink="../{{book.id}}/details">Details</button>
+            <button routerLink="../{{book.id}}/form">Edit</button>
+        </div>
+    }
+</div>

@@ -1,0 +1,19 @@
+.nav {
+    background-color: burlywood;
+    padding: 1rem;
+    font-size: 3rem;
+    display: flex;
+    gap: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    a {
+        color: rgb(102, 85, 63);
+        text-decoration: none;
+        margin-right: 5rem;
+    }
+    a:hover {
+        color: black;
+    }
+      
+}
+  
