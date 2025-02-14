@@ -1,0 +1,10 @@
+@for(todo of todos; track todo){
+    <div class="todo">
+        <p>ID : {{todo.id}}</p>
+        <p>Name : {{todo.name}}</p>
+        <p>Completed : {{todo.isComplete}}</p>
+        <button (click)="deleteTodo(todo.id)">Delete</button>
+        <button (click)="updateTodoStatus(todo.id, !todo.isComplete)">Update</button>
+    </div>
+}
+<button (click)="addTodo()">Add</button>
